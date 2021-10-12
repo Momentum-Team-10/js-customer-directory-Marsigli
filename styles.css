@@ -1,24 +1,13 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.top-row{
+#container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.second-row {
-
-}
-
-.third-row {
-
-}
-
-.thumbnail {
+#customer{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
+
