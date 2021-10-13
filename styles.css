@@ -15,29 +15,45 @@
     flex-wrap: wrap;
     padding: 10px 10px;
     align-items: center;
+    justify-content: center;
     font-weight: 100;
 }
 
 .email {
     color: gray;
+    margin-bottom: 0px;
 }
 
 .img {
-    border-radius: 50px;
+    border-radius: 330px 500px;
+    height: 100px;
 }
 
 .address {
+    flex-wrap: wrap;
     font-weight: 600;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
 }
 
 .DOB {
     font-weight: 600;
+    margin: 0px;
 }
 
 .customer-since {
     font-weight: 600;
+    margin: 0px;
 }
 
 #header {
     font-size: 50px;
+}
+
+.customerName {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 25px;
 }

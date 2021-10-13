@@ -15,8 +15,9 @@ for (customer of customers) {
 
     const customerName = document.createElement('h3')
     customerName.innerText = customer.name.first + ' ' + customer.name.last
+    customerName.className = "customerName"
     card.appendChild(customerName)
-    
+    // customerName.toUpperCase()
     
     
     const customerEmail = document.createElement('p')
