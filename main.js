@@ -14,7 +14,7 @@ for (customer of customers) {
     card.appendChild(customerImg)
 
     const customerName = document.createElement('h3')
-    customerName.innerText = customer.name.first + ' ' + customer.name.last
+    customerName.innerText = capitalizeFirstLetter(customer.name.first) + ' ' + capitalizeFirstLetter(customer.name.last)
     customerName.className = "customerName"
     card.appendChild(customerName)
     // customerName.toUpperCase()
@@ -24,6 +24,8 @@ for (customer of customers) {
     customerEmail.innerText = customer.email
     customerEmail.className = "email"
     card.appendChild(customerEmail)
+
+    
 
     const customerAddress = document.createElement('p')
     customerAddress.innerText = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ' ' + customer.location.state + ' ' + customer.location.postcode
@@ -42,5 +44,9 @@ for (customer of customers) {
 }
 
 
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
 
