@@ -1,52 +1,43 @@
-//Headshot to be poplulated from customer.js to <img>
-//CustomerName to be populated from customer.js to <h3>
-//email to be populated from customer.js to <p>
-//location to be populated from customer.js to <p>
-//DOB to be populated from customer.js to <p>
-
-
 
 const container = document.getElementById("container")
 console.log(container)
 
-// const customer = customers[0]
-// console.log(customer)
-
-// const card = document.createElement('div')
-
-// card.id =  customer.email
-
-// const customerName = document.createElement('h3')
-// customerName.innerText = customer.name.first + ' ' + customer.name.last
-
-// container.appendChild(card)
-
-// card.appendChild(customerName)
-
-// const customerEmail = document.createElement('p')
-// customerEmail.innerText = customer.email
-
-// card.appendChild(customerEmail)
-
 for (customer of customers) {
     const card = document.createElement('div')
-    card.id =  customer.email
+    card.id = customer.email
+    card.className = "card"
+    container.appendChild(card)
+
     const customerImg = document.createElement('img')
     customerImg.src=customer.picture.medium
+    customerImg.className = "img"
+    card.appendChild(customerImg)
+
     const customerName = document.createElement('h3')
     customerName.innerText = customer.name.first + ' ' + customer.name.last
-    container.appendChild(card)
-    card.appendChild(customerImg)
     card.appendChild(customerName)
+    
+    
+    
     const customerEmail = document.createElement('p')
     customerEmail.innerText = customer.email
+    customerEmail.className = "email"
     card.appendChild(customerEmail)
+
     const customerAddress = document.createElement('p')
     customerAddress.innerText = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ' ' + customer.location.state + ' ' + customer.location.postcode
+    customerAddress.className = "address"
     card.appendChild(customerAddress)
+
     const customerDob = document.createElement('p')
-    // customerDob.innerText = moment(customer.dob.date).format(MMM, DD, YYYY)
+    customerDob.innerText = "DOB: " + moment(customer.dob.date).format("MMM DD, YYYY")
+    customerDob.className = "DOB"
     card.appendChild(customerDob)
+
+    const customerSince = document.createElement('p')
+    customerSince.innerText = "Customer Since: " + moment(customer.registered.date).format("MMM DD, YYYY")
+    customerSince.className = "customer-since"
+    card.appendChild(customerSince)
 }
 
 

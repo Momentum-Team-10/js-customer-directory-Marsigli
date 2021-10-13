@@ -1,3 +1,7 @@
+#header {
+    font-weight: bold;
+}
+
 #container {
     display: flex;
     flex-direction: row;
@@ -5,9 +9,35 @@
     align-items: center;
 }
 
-#customer{
+.card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding: 10px 10px;
+    align-items: center;
+    font-weight: 100;
 }
 
+.email {
+    color: gray;
+}
+
+.img {
+    border-radius: 50px;
+}
+
+.address {
+    font-weight: 600;
+}
+
+.DOB {
+    font-weight: 600;
+}
+
+.customer-since {
+    font-weight: 600;
+}
+
+#header {
+    font-size: 50px;
+}
